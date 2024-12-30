@@ -46,8 +46,8 @@ body {
   margin: 0 auto;
   border: 1px solid black;
 
-  /* Estilo para el texto */
-  font-family: 'Amatic SC', sans-serif;
+  /* Estilo para el texto */ 
+  font-family: 'Lato', sans-serif;
   display: flex; /* Crea un contenedor flexible */
   align-items: center; /* Centra verticalmente el contenido */
   justify-content: center; /* Centra horizontalmente el contenido */
