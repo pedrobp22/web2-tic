@@ -14,14 +14,14 @@ body {
 /* Imagen de fondo - más alta para sobresalir por debajo del cuadrado */
 .foto-de-fondo {
   width: 100%; /* Asegura que la imagen cubra todo el ancho */
-  height: 640px; /* Aumentamos la altura para sobresalir debajo del cuadrado */
-  top: 100px; /* Empuja la imagen hacia abajo, debajo del rectángulo */
+  height: 740px; /* Aumentamos la altura para sobresalir debajo del cuadrado */
   background-image: url('https://cdn.agenciasinc.es/var/ezwebin_site/storage/images/_aliases/img_1col/noticias/asi-permanecen-dormidas-las-celulas-tumorales-antes-de-provocar-la-metastasis/9318374-5-esl-MX/Asi-permanecen-dormidas-las-celulas-tumorales-antes-de-provocar-la-metastasis.jpg');
   background-size: cover; /* Asegura que la imagen cubra todo el espacio */
   background-position: center; /* Centra la imagen */
   position: absolute;
+  top: 0; /* La imagen ahora empieza desde la parte superior */
   left: 0;
-  z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+  z-index: -2; /* Asegura que la imagen esté detrás de todo */
   border: 1px solid black;
 }
 
@@ -34,6 +34,7 @@ body {
   margin: 0; /* Elimina cualquier margen extra */
   padding: 0; /* Elimina cualquier relleno */
   box-sizing: border-box;
+  z-index: 1; /* Se asegura que esté por encima de la imagen */
 }
 
 .cuadrado {
@@ -54,14 +55,15 @@ body {
   text-align: center; /* Asegura el centrado del texto */
 }
 
+/* Rectángulo 2 - Azul */
 .rectangulo-2 {
   width: 100vw; /* Usa todo el ancho de la ventana */
   height: 700px;
-  background: #3479c4 ; /* Cambié el color para verificar que se aplique correctamente */
+  background: #3479c4; /* Color azul */
   position: relative;
-  margin-top: 640px; /* Mantén la relación con la imagen */
+  margin-top: 100px; /* Lo coloca justo debajo de la imagen de fondo */
   box-sizing: border-box;
-  z-index: 0;
+  z-index: 1; /* Se asegura que esté por encima de la imagen */
   
   /* Estilo para el texto */
   display: flex;
