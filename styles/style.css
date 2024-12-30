@@ -52,7 +52,7 @@ body {
   align-items: center; /* Centra verticalmente el contenido */
   justify-content: center; /* Centra horizontalmente el contenido */
   color: black; /* Color del texto */
-  font-size: 20px; /* Tamaño de la letra */
+  font-size: 40px; /* Tamaño de la letra */
   text-align: center; /* Asegura el centrado del texto */
 }
 
