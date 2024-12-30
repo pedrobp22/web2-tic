@@ -1,1 +1,73 @@
+/* Restablecer los márgenes de todo el contenido */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Asegúrate de que el body no tenga márgenes */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Imagen de fondo - más alta para sobresalir por debajo del cuadrado */
+.foto-de-fondo {
+  width: 100%; /* Asegura que la imagen cubra todo el ancho */
+  height: 640px; /* Aumentamos la altura para sobresalir debajo del cuadrado */
+  top: 100px; /* Empuja la imagen hacia abajo, debajo del rectángulo */
+  background-image: url('https://cdn.agenciasinc.es/var/ezwebin_site/storage/images/_aliases/img_1col/noticias/asi-permanecen-dormidas-las-celulas-tumorales-antes-de-provocar-la-metastasis/9318374-5-esl-MX/Asi-permanecen-dormidas-las-celulas-tumorales-antes-de-provocar-la-metastasis.jpg');
+  background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+  background-position: center; /* Centra la imagen */
+  position: absolute;
+  left: 0;
+  z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+  border: 1px solid black;
+}
+
+/* Rectángulo ajustado al 100% */
+.rectangulo {
+  width: 100vw; /* Usa todo el ancho de la ventana */
+  height: 100px;
+  background: white;
+  position: relative;
+  margin: 0; /* Elimina cualquier margen extra */
+  padding: 0; /* Elimina cualquier relleno */
+  box-sizing: border-box;
+}
+
+.cuadrado {
+  width: 540px;
+  height: 540px;
+  background: white;
+  position: relative;
+  transform: translateX(330px); /* Ajusta la posición para que se alinee */
+  margin: 0 auto;
+  border: 1px solid black;
+
+  /* Estilo para el texto */
+  display: flex; /* Crea un contenedor flexible */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  color: black; /* Color del texto */
+  font-size: 20px; /* Tamaño de la letra */
+  text-align: center; /* Asegura el centrado del texto */
+}
+
+.rectangulo-2 {
+  width: 100vw; /* Usa todo el ancho de la ventana */
+  height: 700px;
+  background: white;
+  position: relative; /* Se asegura que siga en el flujo normal */
+  margin-top: 650px; /* Lo mueve justo después de la imagen de fondo */
+  box-sizing: border-box;
+  z-index: 0; /* Coloca el rectángulo debajo de la imagen */
+  
+   /* Estilo para el texto */
+  display: flex; /* Crea un contenedor flexible */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  color: black; /* Color del texto */
+  font-size: 35px; /* Tamaño de la letra */
+  text-align: center; /* Asegura el centrado del texto */
+}
