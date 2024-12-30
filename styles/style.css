@@ -57,17 +57,17 @@ body {
 .rectangulo-2 {
   width: 100vw; /* Usa todo el ancho de la ventana */
   height: 700px;
-  background: white;
-  position: relative; /* Se asegura que siga en el flujo normal */
-  margin-top: 650px; /* Lo mueve justo después de la imagen de fondo */
+  background: #3479c4 ; /* Cambié el color para verificar que se aplique correctamente */
+  position: relative;
+  margin-top: 640px; /* Mantén la relación con la imagen */
   box-sizing: border-box;
-  z-index: 0; /* Coloca el rectángulo debajo de la imagen */
+  z-index: 0;
   
-   /* Estilo para el texto */
-  display: flex; /* Crea un contenedor flexible */
-  align-items: center; /* Centra verticalmente el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
-  color: black; /* Color del texto */
-  font-size: 35px; /* Tamaño de la letra */
-  text-align: center; /* Asegura el centrado del texto */
+  /* Estilo para el texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Asegura que el texto sea visible sobre el fondo */
+  font-size: 35px;
+  text-align: center;
 }
