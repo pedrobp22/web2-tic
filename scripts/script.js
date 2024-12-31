@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
   let myButton = document.querySelector('button'); // Botón para cambiar el nombre
   let nombreUsuario = document.getElementById('nombreUsuario'); // Elemento donde aparecerá el nombre del usuario
@@ -28,3 +29,4 @@ document.addEventListener('DOMContentLoaded', function () {
     setUserName();
   };
 });
+console.log('El script está cargado');
