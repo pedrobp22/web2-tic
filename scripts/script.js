@@ -28,3 +28,4 @@ document.addEventListener('DOMContentLoaded', function () {
     setUserName();
   };
 });
+console.log('El script está cargado');
