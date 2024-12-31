@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -81,9 +82,28 @@ body {
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   height: 300px; /* Ajusta este valor para dar la misma altura */
-    min-height: 330px; /* Esto asegura que todos los elementos tengan al menos 300px de altura */
+    min-height: 400px; /* Esto asegura que todos los elementos tengan al menos 300px de altura */
   box-sizing: border-box;
   overflow: hidden;
+}
+#proteina-p53 img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto; 
+  height: auto; 
+  border-radius: 8px; 
+  height: 150px; 
+  object-fit: cover;
+}
+
+#introduction img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto; 
+  height: auto; 
+  border-radius: 8px; 
+  height: 180px; 
+  object-fit: cover;
 }
 
 #p53-relacion-cancer {
@@ -120,6 +140,13 @@ p {
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#movingImage {
+  position: absolute; 
+  top: 1320px; 
+  left: 0; 
+  width: 110px; 
+  height: auto; 
 }
 
   button {
