@@ -1,62 +1,67 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entendiendo el Cáncer: Telómeros, p53 y Células Tumorales</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">    
-</head>
-<body>
+document.addEventListener('DOMContentLoaded', function () {
+  let myButton = document.querySelector('button'); // Botón para cambiar el nombre
+  let nombreUsuario = document.getElementById('nombreUsuario'); // Elemento donde aparecerá el nombre del usuario
 
-<div class="rectangulo"></div>
-<div class="foto-de-fondo"></div>
-<div class="cuadrado">
-  Entendiendo el Cáncer: Telómeros, p53 y Células Tumorales
-</div>
-<div class="rectangulo-2">
-  <p>¡Bienvenido a mi página web! Me alegra que estés aquí.</p>
-  <p>Hola <span id="nombreUsuario">[tu nombre]</span>, esta web está dedicada a proporcionar información clara sobre el cáncer, con un enfoque del temario de segundo de bachillerato, en el que se tratan conceptos como los telómeros, ciclo celular, proteína p53,… que se alojan dentro del temario de Citología Celular de Biología. Entenderás cómo esto está relacionado con el cáncer y cómo afecta el comportamiento de las células tumorales. Mi objetivo es que puedas entender este mini apartado de una manera sencilla y didáctica, para que sea más llevadero. Suerte y vamos a ello.</p>
-  <p>Además, os dejo un enlace a la página web <a href="https://www.cancerresearchuk.org" title="Enlace a página web: Cancer Research UK. Abre en ventana nueva." target="_blank"> Cancer Research UK </a>, que es un recurso excepcional donde podéis encontrar información. No solo encontraréis datos sobre el cáncer, sino que también es un sitio donde se puede apoyar la causa, ya sea a través de donaciones o participando en sus campañas de diversas maneras. </p>
-       <button id="changeNameButton">Cambiar Nombre</button>
-</div>
-    
-<main class="main-content">
-      <section id="introduction">
-            <div class="content-left">
-                <h2>¿Qué son los telómeros?</h2>
-            <p>
-                Los telómeros son regiones terminales de los cromosomas que contienen secuencias de ADN. Estos cromosomas son la mayor condensación de nuestro material genético y se encuentran en el núcleo celular. Los telómeros actúan como una "cubierta" que evita que el ADN se dañe.
-            </p>
-                 </div>
-          <div class="content-right">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Telomere.png" alt="Telomero">
-            </div>
-        </section>
+  // Función para cambiar el nombre del usuario
+  function setUserName() {
+    let myName = prompt('Por favor, introduce tu nombre.');
+    if (!myName) {
+      setUserName(); // Si no se introduce un nombre, vuelve a preguntar
+    } else {
+      // Guardar el nombre en localStorage
+      localStorage.setItem('name', myName);
+      // Cambiar el contenido del elemento con id 'nombreUsuario'
+      nombreUsuario.textContent = myName;
+    }
+  }
 
-        <section id="cancer-relation">
-            <h2>¿Cómo se relaciona el recortamiento telomérico con el cáncer?</h2>
-            <p>
-                Cuando el material genético se replica, los telómeros se acortan de forma gradual. Este proceso es natural y tiene como objetivo que, cuando los telómeros lleguen a su límite, indicando que la célula ha envejecido, se active la apoptosis, o muerte celular programada. Pero, ¿qué tiene esto que ver con el cáncer? Cuando una célula normal sufre mutaciones por diversos factores, una de las características de las células cancerosas es que no experimentan este acortamiento telomérico. En lugar de eso, las células cancerosas activan una enzima llamada telomerasa, que detiene este desgaste, permitiendo que la célula continúe dividiéndose sin restricciones. Es por esto que las células cancerosas se multiplican de manera descontrolada.
-            </p>
-        </section>
+  // Verifica si ya hay un nombre guardado en localStorage
+  if (!localStorage.getItem('name')) {
+    setUserName(); // Si no hay nombre guardado, pide el nombre
+  } else {
+    let storedName = localStorage.getItem('name');
+    nombreUsuario.textContent = storedName; // Muestra el nombre guardado
+  }
 
- <section id="proteina-p53">
-            <h2>¿Qué es la proteína p53?</h2>
-            <p>
-    La proteína p53 es una proteína que se encuentra en todas las células del organismo y que tiene un papel vital en la protección del ADN. Asignándose el papel de “guardian”, este vigila el ciclo de las células, asegurándose de que sólo puedan dividirse cuando se den las condiciones adecuadas. Si una parte del ADN de una célula sufre algún daño, p53 interrumpe el proceso de división celular para permitir que la célula se repare. Si el daño no es reparable, p53 puede iniciar el proceso de apoptosis, mediante el cual la célula “se suicida”, destruyéndose así a sí misma para evitar problemas más graves.
-            </p>
-       <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/1tup.jpg" alt="P53">
-        </section>
+  // Cambiar el nombre cuando se hace clic en el botón
+  myButton.onclick = function () {
+    setUserName();
+  };
 
- <section id="p53-relacion-cancer">
-            <h2>La relación entre la proteína p53 y el cáncer</h2>
-            <p>
-  La relación entre la proteína p53 y el cáncer radica en que, cuando p53 está mutada (por la  exposición a carcinógenos, errores en la replicación del ADN o a factores genéticos ), pierde su capacidad de detener la división de células con ADN dañado. Esto permite que las células continúen dividiéndose de manera descontrolada, lo que aumenta el riesgo de desarrollar tumores (conjunto de células que se multiplican descontroladamente creando masas anormles de tejidos). De hecho, las mutaciones en el gen de p53 están presentes en más del 50% de los cánceres humanos, lo que ensalza la importancia de esta proteína en la prevención del cáncer. Así, una anomalía en el funcionaiento de p53 es uno de los factores clave en el proceso de formación del cáncer.
-            </p>
-        </section>
-    </main>
-    <img id="movingImage"src="https://png.pngtree.com/png-vector/20240914/ourmid/pngtree-cancer-cancer-cell-cartoon-png-image_13600254.png" alt="Celula Cancerosa">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="js/script.js"></script>
-</body>
+  // Función para cambiar la imagen
+  let myImage = document.querySelector('#proteina-p53 img');
+
+  myImage.onclick = function () {
+    let mySrc = myImage.getAttribute('src'); // Obtiene el valor del atributo 'src'
+    if (mySrc === 'https://upload.wikimedia.org/wikipedia/commons/0/00/1tup.jpg') {
+      myImage.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Cell_Cycle_2.svg/1920px-Cell_Cycle_2.svg.png');
+    } else {
+      myImage.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/0/00/1tup.jpg');
+    }
+  };
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const image = document.getElementById('movingImage');
+    let positionX = 0; // Posición inicial
+    const speed = 0.75; // Velocidad de movimiento
+
+    function moveImage() {
+        // Mover la imagen incrementando la posición
+        positionX += speed;
+
+        // Si la imagen llega al final de la pantalla, vuelve al principio
+        if (positionX > window.innerWidth) {
+            positionX = -image.width; // Coloca la imagen fuera de la pantalla a la izquierda
+        }
+
+        // Actualiza la posición de la imagen en la pantalla
+        image.style.left = positionX + 'px';
+
+        // Llama a la función en el siguiente frame para crear el movimiento
+        requestAnimationFrame(moveImage);
+    }
+
+    // Iniciar el movimiento de la imagen
+    moveImage();
+});
