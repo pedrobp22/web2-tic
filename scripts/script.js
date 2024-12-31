@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  let myButton = document.querySelector('button'); // Botón para cambiar el nombre
+  let myButton = document.getElementById('changeNameButton'); // Botón para cambiar el nombre
   let nombreUsuario = document.getElementById('nombreUsuario'); // Elemento donde aparecerá el nombre del usuario
 
   // Función para cambiar el nombre del usuario
