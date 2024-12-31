@@ -27,5 +27,41 @@ document.addEventListener('DOMContentLoaded', function () {
   myButton.onclick = function () {
     setUserName();
   };
+
+  // Función para cambiar la imagen
+  let myImage = document.querySelector('#proteina-p53 img');
+
+  myImage.onclick = function () {
+    let mySrc = myImage.getAttribute('src'); // Obtiene el valor del atributo 'src'
+    if (mySrc === 'https://upload.wikimedia.org/wikipedia/commons/0/00/1tup.jpg') {
+      myImage.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Cell_Cycle_2.svg/1920px-Cell_Cycle_2.svg.png');
+    } else {
+      myImage.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/0/00/1tup.jpg');
+    }
+  };
 });
-console.log('El script está cargado');
+
+document.addEventListener("DOMContentLoaded", () => {
+    const image = document.getElementById('movingImage');
+    let positionX = 0; // Posición inicial
+    const speed = 0.75; // Velocidad de movimiento
+
+    function moveImage() {
+        // Mover la imagen incrementando la posición
+        positionX += speed;
+
+        // Si la imagen llega al final de la pantalla, vuelve al principio
+        if (positionX > window.innerWidth) {
+            positionX = -image.width; // Coloca la imagen fuera de la pantalla a la izquierda
+        }
+
+        // Actualiza la posición de la imagen en la pantalla
+        image.style.left = positionX + 'px';
+
+        // Llama a la función en el siguiente frame para crear el movimiento
+        requestAnimationFrame(moveImage);
+    }
+
+    // Iniciar el movimiento de la imagen
+    moveImage();
+});
