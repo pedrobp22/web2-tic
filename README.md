@@ -2,10 +2,9 @@ En esta tarea me he basado en las dos páginas web proporcionadas. En la primera
 · Estructura del repositorio: carpetas images, styles y scripts, y archivos README.md, LICENSE e index.html. 
 · README con explicación de la tarea y enlace a la web creada. 
 · Recurso JS de intercambio de imágenes al hacer clic sobre ellas. 
-· Recurso JS de campo de texto (que cambie algún texto de la web al introducirlo el usuario, por ejemplo). 
+· Recurso JS de campo de texto que cambia algún texto de la web al introducirlo el usuario.
 · Recurso JS de objeto en movimiento. 
-· Incorporación de una fuente (mira el apartado Fuentes y Texto asi como el de Fuente) llamativa o distintiva. 
-· Licencia de recurso no-software (CC), 10 ptos. Por curiosidad podéis ver estas licencias recomendadas para software.
-· Página web con estética similar a alguna de las recomendadas (indicar cuál en el README). 
+· Incorporación de una fuente llamativa o distintiva. 
+· Licencia de recurso no-software (CC).
 
 La licencia que he utilizado es Creative Commons Attribution 4.0 International (CC BY 4.0), que considero una licencia muy abierta y adecuada para este proyecto. A continuación, dejo el enlace a mi página web creada en GitHub: https://pedrobp22.github.io/web2-tic/
